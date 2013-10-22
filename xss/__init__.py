@@ -16,6 +16,9 @@ def main(global_config, **settings):
     config.add_route('one', '/1')
     config.add_route('two', '/2')
     config.add_route('three', '/3')
+    config.add_route('four', '/4')
+    config.add_route('five', '/5')
+    
     
     config.scan()
     return config.make_wsgi_app()
