@@ -1,5 +1,4 @@
 from pyramid.response import Response
-
 from pyramid.view import view_config
 
 
@@ -10,4 +9,4 @@ def one(request):
         return Response("Hello world")
     else:
         return Response("Hello %s" % name)
-
+    

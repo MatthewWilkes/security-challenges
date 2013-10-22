@@ -1,0 +1,15 @@
+<html metal:use-macro="view.global_template">
+    <body metal:fill-slot="body">
+        
+        <form tal:replace="structure form" />
+        
+        <div class="well">
+            <div tal:repeat="comment comments">
+                <h2>${comment['name']}</h2>
+                <div tal:content="structure comment['comment']" />
+            </div>
+        </div>
+        
+    </body>
+</html>
+

@@ -12,6 +12,8 @@ requires = [
     'pyramid',
     'pyramid_chameleon',
     'waitress',
+    'colander',
+    'pyramid_deform',
     ]
 
 setup(name='xss',

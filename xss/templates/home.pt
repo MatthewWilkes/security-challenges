@@ -1,6 +1,6 @@
 <html metal:use-macro="view.global_template">
     <body metal:fill-slot="body">
-        <ul>
+        <ul class="align-center">
             <li tal:repeat="challenge challenges" style="list-style-type: none;">
                 <a href="/${challenge}">Challenge ${challenge}</a>
             </li>
