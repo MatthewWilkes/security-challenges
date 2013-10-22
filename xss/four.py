@@ -23,7 +23,7 @@ def safe_html(node, value):
     tags_used = set(TAGS.findall(value))
     if not tags_used < SAFE_TAGS:
         raise colander.Invalid(node, 'You have entered HTML tags that are not allowed')
-    if HANDLERS.findall(value)
+    if HANDLERS.findall(value):
         raise colander.Invalid(node, 'Javascript handlers are not allowed')
 
 class GuestBookSchema(colander.MappingSchema):
