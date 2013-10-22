@@ -53,8 +53,8 @@ class Five(Layouts):
     def post(self):
         controls = self.request.POST.items()
         
-        cleaner = Cleaner(scripts=True, embedded=True, meta=True, 
-                          page_structure=True)
+        cleaner = Cleaner(scripts=True, javascript=True, links=True, 
+                meta=True, embedded=True, safe_attrs_only=True)
         
         try:
             appstruct = self.form.validate(controls)
