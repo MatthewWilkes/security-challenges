@@ -1,3 +1,5 @@
+from pyramid.renderers import get_renderer
+from pyramid.decorator import reify
 from pyramid.config import Configurator
 
 
@@ -14,3 +16,16 @@ def main(global_config, **settings):
     
     config.scan()
     return config.make_wsgi_app()
+
+
+class Layouts(object):
+
+    
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+
+    @reify
+    def global_template(self):
+        renderer = get_renderer("templates/main_template.pt")
+        return renderer.implementation().macros['layout']
