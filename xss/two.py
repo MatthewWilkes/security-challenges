@@ -46,7 +46,7 @@ class Two(Layouts):
         controls = self.request.POST.items()
         try:
             appstruct = self.form.validate(controls)
-        except ValidationFailure, e:
+        except ValidationFailure as e:
             return {
                 'form': e.render(),
                 'js': self.form.get_widget_resources()['js'],
