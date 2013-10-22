@@ -2,7 +2,10 @@
     <body metal:fill-slot="body">
         <ul class="align-center">
             <li tal:repeat="challenge challenges" style="list-style-type: none;">
-                <a href="/${challenge}">Challenge ${challenge}</a>
+                <a href="/${challenge}">Challenge ${challenge}</a> 
+                (<a href="${'https://github.com/MatthewWilkes/security-challenges/blob/master/xss/%s' % challenges[challenge]}">
+                    source
+                </a>)
             </li>
         </ul>
     </body>
