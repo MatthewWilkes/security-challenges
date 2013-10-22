@@ -14,7 +14,6 @@ requires = [
     'waitress',
     'colander',
     'pyramid_deform',
-    'lxml',
     ]
 
 setup(name='xss',
